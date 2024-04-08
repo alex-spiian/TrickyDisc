@@ -1,4 +1,3 @@
-using System;
 using JetBrains.Annotations;
 using UnityEngine;
 using Random = UnityEngine.Random;
@@ -32,7 +31,6 @@ namespace Enemy
             Spawn();
         }
 
-        //вызывается при возвращении игрока на стартовую точку
         [UsedImplicitly]
         public void Spawn() 
         {
@@ -43,7 +41,6 @@ namespace Enemy
         
         private bool ShouldSpawnOnLeftSide()
         {
-            //для int метод возвращает от 0 до 1
             var randomSpawn = Random.Range(0, 2); 
             return randomSpawn == 1;
         }

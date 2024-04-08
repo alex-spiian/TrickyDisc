@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
@@ -27,7 +25,6 @@ public class AudioController : MonoBehaviour
         _image.sprite = _soundVolume == 1 ? _activeSoundSprite : _inactiveSoundSprite;
     }
     
-    //вызывается при нажатии на кнопку звука
     [UsedImplicitly]
     public void ToggleSound()
     {

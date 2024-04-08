@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using JetBrains.Annotations;
 using Player;
 using UnityEngine;
@@ -29,7 +27,6 @@ public class PlayerController : MonoBehaviour
         _isMoving = false;
         _startPosition = transform.position;
     }
-    //вызывается через коллбэк нажатия кнопки передвижения
     [UsedImplicitly]
     public void Move() 
     {
@@ -44,14 +41,12 @@ public class PlayerController : MonoBehaviour
             _rigidbody.velocity = transform.up * _movementVelocity;
         }
     }
-    //вызывается через ивент, при коллизии игрока с врагом
     [UsedImplicitly]
     public void ChangeDirection() 
     {
         _rigidbody.velocity *= -1;
     }
     
-    //вызывается через ивент, при возвращении игрока в стар поинт триггер
     [UsedImplicitly]
     public void ResetPosition() 
     {
@@ -68,7 +63,6 @@ public class PlayerController : MonoBehaviour
 
     }
     
-    //вызывается по ивенту смерти игрока
     [UsedImplicitly]
     public void OnPlayerDied()
     {

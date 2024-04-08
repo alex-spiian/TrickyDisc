@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using DG.Tweening;
 using JetBrains.Annotations;
 using TMPro;
@@ -34,7 +32,6 @@ public class GameOverScreen : MonoBehaviour
         _bestScoreLabel.text = $"BEST {bestScore.ToString()}";
     }
     
-    //вызывается при нажатии на кнопку рестарта игры
     [UsedImplicitly]
     public void RestartGame()
     {
